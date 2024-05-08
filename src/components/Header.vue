@@ -1,8 +1,3 @@
-<script setup>
-import { ref } from 'vue'
-const page = ref('Home')
-</script>
-
 <template>
   <div class="header_sup">
     <div class="circle">
@@ -23,6 +18,11 @@ const page = ref('Home')
   </div>
   <hr class="header_bottom" />
 </template>
+
+<script setup>
+import { ref } from 'vue'
+const page = ref('Home')
+</script>
 
 <style scoped>
 .header_sup {
@@ -60,7 +60,6 @@ a {
 }
 
 .header_mid a {
-  text-decoration: none;
   width: 140px;
   display: inline-block;
   text-align: center;
