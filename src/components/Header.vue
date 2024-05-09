@@ -51,7 +51,6 @@ p,
 a {
   color: white;
   opacity: 0.4;
-  font-family: 'Fira Code', monospace;
 }
 
 .header_mid {
@@ -87,9 +86,9 @@ a.selected {
 }
 
 .header_bottom {
-  border: none; /* Supprime la bordure par défaut */
-  border-bottom: 12px solid rgba(255, 255, 255, 0); /* Ajoute une bordure en bas de la barre de navigation */
-  background-color: transparent; /* Définit la couleur de fond sur transparent */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ajoute une ombre noire en dessous de la bordure */
+  border: none;
+  border-bottom: 12px solid rgba(255, 255, 255, 0);
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 </style>

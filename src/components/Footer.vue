@@ -36,7 +36,6 @@ a {
 }
 
 .time {
-  font-family: 'Fira Code', monospace;
   padding: 2px;
 }
 

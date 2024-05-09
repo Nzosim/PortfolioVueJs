@@ -7,6 +7,7 @@ import Footer from '@/components/Footer.vue'
 <template>
   <div id="page">
     <Header />
+    <RouterView />
     <Footer />
   </div>
 </template>
@@ -14,6 +15,7 @@ import Footer from '@/components/Footer.vue'
 <style>
 body {
   background-color: #1e1e1e;
+  font-family: 'Fira Code', monospace;
 }
 
 #page {
