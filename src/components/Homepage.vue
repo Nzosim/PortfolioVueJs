@@ -58,7 +58,7 @@ p {
 
 @media screen and (max-width: 930px) {
   .home_left {
-    top: 20%;
+    top: 30%;
     left: 20%;
     width: 60%;
   }
