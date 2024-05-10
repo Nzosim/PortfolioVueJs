@@ -6,12 +6,16 @@
       <div class="bg-green-lighten-2"></div>
     </div>
     <p>Simonin Enzo</p>
+    <v-icon v-if="!isMenuOpen" class="header_sup_menu" @click="isMenuOpen = !isMenuOpen"
+      >mdi-menu</v-icon
+    >
+    <v-icon v-else class="header_sup_menu" @click="isMenuOpen = !isMenuOpen">mdi-close</v-icon>
   </div>
-  <div class="header_mid">
+  <div class="header_mid" v-show="isMenuOpen">
     <a href="#" :class="{ selected: page === 'Home' }">Home</a>
     <a href="#" :class="{ selected: page === 'My TechStack' }">My TechStack</a>
     <a href="#" :class="{ selected: page === 'My experiences' }">My experiences</a>
-    <a href="#" :class="{ selected: page === 'My Projetcs' }">My Projects</a>
+    <a href="#" :class="{ selected: page === 'My Projects' }">My Projects</a>
     <a href="#" :class="{ selected: page === 'About Me' }">About Me</a>
     <a href="#" :class="{ selected: page === 'Contact Me' }">Contact Me</a>
     <div class="mid_empty"></div>
@@ -21,7 +25,9 @@
 
 <script setup>
 import { ref } from 'vue'
+
 const page = ref('Home')
+const isMenuOpen = ref(window.innerWidth > 930)
 </script>
 
 <style scoped>
@@ -90,5 +96,41 @@ a.selected {
   border-bottom: 12px solid rgba(255, 255, 255, 0);
   background-color: transparent;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header_sup_menu {
+  display: none;
+}
+
+@media screen and (max-width: 930px) {
+  .header_bottom {
+    display: none;
+  }
+  .header_sup_menu {
+    display: block;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 1px;
+    margin-right: 8px;
+  }
+  .header_sup {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+  .header_mid {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+  .header_mid a {
+    width: 100%;
+    border-right: none;
+    text-align: left;
+    padding-left: 30px;
+  }
+  a.selected {
+    border-top: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  }
 }
 </style>
