@@ -36,15 +36,17 @@ p {
 @media screen and (max-width: 1600px) {
   .home_left {
     left: 10%;
-  }
-  .home_right {
-    height: 400px;
+    width: 30%;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .home_left {
-    left: 5%;
+    left: 15%;
+    width: 40%;
+  }
+  .home_right {
+    height: 400px;
   }
   .name {
     font-size: 2.5rem;
