@@ -45,4 +45,12 @@ a {
   width: calc(100vw - 100px);
   border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
+
+@media screen and (max-width: 930px) {
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+  }
+}
 </style>
