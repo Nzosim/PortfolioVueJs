@@ -12,12 +12,23 @@
     <v-icon v-else class="header_sup_menu" @click="isMenuOpen = !isMenuOpen">mdi-close</v-icon>
   </div>
   <div class="header_mid" v-show="isMenuOpen">
-    <a href="#" :class="{ selected: page === 'Home' }">Home</a>
-    <a href="#" :class="{ selected: page === 'My TechStack' }">My TechStack</a>
-    <a href="#" :class="{ selected: page === 'My experiences' }">My experiences</a>
-    <a href="#" :class="{ selected: page === 'My Projects' }">My Projects</a>
-    <a href="#" :class="{ selected: page === 'About Me' }">About Me</a>
-    <a href="#" :class="{ selected: page === 'Contact Me' }">Contact Me</a>
+    <a @click="page.length === 0" href="/" :class="{ selected: page.length === 0 }">Home</a>
+    <a @click="page = 'techstack'" href="techstack" :class="{ selected: page === 'techstack' }"
+      >My TechStack</a
+    >
+    <a
+      @click="page = 'experiences'"
+      href="experiences"
+      :class="{ selected: page === 'experiences' }"
+      >My experiences</a
+    >
+    <a @click="page = 'projects'" href="projects" :class="{ selected: page === 'projects' }"
+      >My Projects</a
+    >
+    <a @click="page = 'about'" href="about" :class="{ selected: page === 'about' }">About Me</a>
+    <a @click="page = 'contact'" href="contact" :class="{ selected: page === 'contact' }"
+      >Contact Me</a
+    >
     <div class="mid_empty"></div>
   </div>
   <hr class="header_bottom" />
@@ -26,7 +37,8 @@
 <script setup>
 import { ref } from 'vue'
 
-const page = ref('Home')
+const url = window.location.href
+const page = ref(url.split('/').pop())
 const isMenuOpen = ref(window.innerWidth > 930)
 </script>
 
