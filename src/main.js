@@ -12,6 +12,8 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import '@mdi/font/css/materialdesignicons.css'
 
+import { SpeedInsights } from '@vercel/speed-insights/vue'
+
 const app = createApp(App)
 
 const vuetify = createVuetify({
@@ -22,5 +24,6 @@ const vuetify = createVuetify({
 app.use(vuetify)
 app.use(createPinia())
 app.use(router)
+app.use(SpeedInsights)
 
 app.mount('#app')
