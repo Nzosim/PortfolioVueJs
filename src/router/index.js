@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Homepage from '@/components/Homepage.vue'
 import TechStack from '@/components/TechStack.vue'
-import Experiences from '@/components/Experiences.vue'
 import Projects from '@/components/Projects.vue'
 import About from '@/components/About.vue'
 import Contact from '@/components/Contact.vue'
@@ -18,11 +17,6 @@ const router = createRouter({
       path: '/techstack',
       name: 'techstack',
       component: TechStack
-    },
-    {
-      path: '/experiences',
-      name: 'experiences',
-      component: Experiences
     },
     {
       path: '/projects',

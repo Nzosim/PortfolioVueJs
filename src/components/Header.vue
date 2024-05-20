@@ -16,12 +16,6 @@
     <a @click="page = 'techstack'" href="techstack" :class="{ selected: page === 'techstack' }"
       >My TechStack</a
     >
-    <a
-      @click="page = 'experiences'"
-      href="experiences"
-      :class="{ selected: page === 'experiences' }"
-      >My experiences</a
-    >
     <a @click="page = 'projects'" href="projects" :class="{ selected: page === 'projects' }"
       >My Projects</a
     >
@@ -100,7 +94,7 @@ a.selected {
 
 .mid_empty {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  width: calc(100% - (6 * 140px));
+  width: calc(100% - (5 * 140px));
 }
 
 .header_bottom {
@@ -114,7 +108,7 @@ a.selected {
   display: none;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 700px) {
   .header_bottom {
     display: none;
   }
