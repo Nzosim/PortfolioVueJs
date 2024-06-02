@@ -40,10 +40,18 @@ a {
 }
 
 .footer {
+  background-color: #2c2c2c;
   position: fixed;
   bottom: 40px;
   width: calc(100vw - 100px);
   border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (min-width: 930px) {
+  .footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
 
 @media screen and (max-width: 930px) {
