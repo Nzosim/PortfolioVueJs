@@ -64,8 +64,10 @@
     </div>
     <div class="preview">
       <div class="close">
-        <v-icon>mdi-file-find</v-icon>
-        <p>preview</p>
+        <div class="d-flex">
+          <v-icon class="mr-3">mdi-file-find</v-icon>
+          <p>preview</p>
+        </div>
         <v-icon>mdi-close</v-icon>
       </div>
       <div class="text">
@@ -103,7 +105,6 @@ const isContactOpen = ref(true)
 
 .menu {
   width: 11%;
-  height: calc(75vh);
 }
 
 .menu div {
@@ -126,6 +127,7 @@ const isContactOpen = ref(true)
 
 .page,
 .preview {
+  height: 300vw;
   width: 45%;
   overflow-y: auto;
 }
@@ -138,13 +140,12 @@ const isContactOpen = ref(true)
 
 .close {
   justify-content: space-between;
-  width: 25%;
+  width: 30%;
   border-right: 2px solid rgba(255, 255, 255, 0.2);
   padding: 10px;
 }
 
 .page {
-  height: 100vw;
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
@@ -177,5 +178,55 @@ h1 {
 .menu-all:hover {
   background: #363535;
   transition: 0.1s;
+}
+
+@media screen and (max-width: 1840px) {
+  .menu {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .close {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1148px) {
+  .menu {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .page {
+    display: none;
+  }
+  .menu {
+    width: 30%;
+  }
+  .preview {
+    width: 70%;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about {
+    flex-direction: column;
+  }
+  .menu {
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 10px;
+  }
+  .preview {
+    width: 100%;
+    border: none;
+  }
+  .preview .text {
+    padding: 20px;
+    margin-bottom: 50px;
+  }
 }
 </style>
