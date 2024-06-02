@@ -26,6 +26,7 @@ a {
   background-color: #2c2c2c;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 930px) {

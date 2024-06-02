@@ -1,57 +1,59 @@
 <template>
   <div class="about">
     <div class="menu">
-      <div class="d-flex menu-all pt-3 pb-2 pl-2">
-        <v-icon>mdi-arrow-down-drop-circle</v-icon>
+      <div class="d-flex menu-all pt-3 pb-2 pl-2" @click="isPersonalOpen = !isPersonalOpen">
+        <v-icon>{{ isPersonalOpen ? 'mdi-menu-down' : 'mdi-menu-right' }}</v-icon>
         <p>personal-info</p>
       </div>
-      <div class="personal">
-        <div class="d-flex">
-          <v-icon>mdi-folder-open-outline</v-icon>
+      <div v-if="isPersonalOpen" class="personal">
+        <div class="d-flex" @click="isBioOpen = !isBioOpen">
+          <v-icon>{{ isBioOpen ? 'mdi-chevron-down' : 'mdi-chevron-right' }}</v-icon>
+          <v-icon color="#e57373">mdi-folder-open-outline</v-icon>
           <p>bio</p>
         </div>
-        <div class="d-flex text-white ml-4">
-          <v-icon>mdi-information</v-icon>
-          <p>about-me</p>
+        <div v-if="isBioOpen" class="d-flex text-white ml-6">
+          <v-icon color="white">mdi-information</v-icon>
+          <p>about-me.md</p>
         </div>
-        <div class="d-flex">
-          <v-icon>mdi-folder</v-icon>
+        <div class="d-flex" @click="isExperiencesOpen = !isExperiencesOpen">
+          <v-icon>{{ isExperiencesOpen ? 'mdi-chevron-down' : 'mdi-chevron-right' }}</v-icon>
+          <v-icon color="yellow">mdi-folder</v-icon>
           <p>experiences</p>
         </div>
-        <div class="d-flex ml-4">
-          <v-icon>mdi-information</v-icon>
-          <p>education</p>
+        <div v-if="isExperiencesOpen" class="d-flex ml-6">
+          <v-icon color="white">mdi-information</v-icon>
+          <p>education.md</p>
         </div>
-        <div class="d-flex ml-4">
-          <v-icon>mdi-information</v-icon>
-          <p>internship</p>
+        <div v-if="isExperiencesOpen" class="d-flex ml-6">
+          <v-icon color="white">mdi-information</v-icon>
+          <p>internship.md</p>
         </div>
-        <div class="d-flex ml-4">
-          <v-icon>mdi-information</v-icon>
-          <p>apprentice</p>
+        <div v-if="isExperiencesOpen" class="d-flex ml-6">
+          <v-icon color="white">mdi-information</v-icon>
+          <p>apprentice.md</p>
         </div>
       </div>
       <div class="contact">
-        <div class="d-flex menu-all pt-3 pb-2 pl-2">
-          <v-icon>mdi-arrow-down-drop-circle</v-icon>
+        <div class="d-flex menu-all pt-3 pb-2 pl-2" @click="isContactOpen = !isContactOpen">
+          <v-icon>{{ isContactOpen ? 'mdi-menu-down' : 'mdi-menu-right' }}</v-icon>
           <p>contact</p>
         </div>
-        <div class="d-flex ml-4">
-          <v-icon>mdi-information</v-icon>
-          <p>contact</p>
+        <div v-if="isContactOpen" class="d-flex ml-6 mt-1">
+          <v-icon color="white">mdi-information</v-icon>
+          <p>contact.md</p>
         </div>
       </div>
     </div>
     <div class="page">
       <div class="close">
-        <p>about-me</p>
+        <p>about-me.md</p>
         <v-icon>mdi-close</v-icon>
       </div>
       <div class="text">
         <p># SIMONIN Enzo</p>
         <p>
           Je suis `actuellement` en troisième année de **BUT Informatique** en `alternance` chez
-          **Dassault Systèmes** à Nancy.
+          **Dassault Systèmes**.
         </p>
         <p>
           Futur étudiant de **Polytech Nancy** en cycle ingénieur Informatique Automatisme Robotique
@@ -71,7 +73,7 @@
         <p>
           Je suis <span class="text-yellow">actuellement</span> en troisième année de
           <b>BUT Informatique</b> en <span class="text-yellow">alternance</span> chez
-          <b>Dassault Systèmes</b> à Nancy.
+          <b>Dassault Systèmes</b>.
         </p>
         <p>
           Futur étudiant de <b>Polytech Nancy</b> en cycle ingénieur Informatique Automatisme
@@ -84,6 +86,15 @@
   </div>
 </template>
 
+<script setup>
+import { ref } from 'vue'
+
+const isPersonalOpen = ref(true)
+const isBioOpen = ref(true)
+const isExperiencesOpen = ref(true)
+const isContactOpen = ref(true)
+</script>
+
 <style scoped>
 .about {
   display: flex;
@@ -91,7 +102,7 @@
 }
 
 .menu {
-  width: 10%;
+  width: 11%;
   height: calc(75vh);
 }
 
@@ -101,15 +112,22 @@
 
 .menu div p {
   padding-left: 10px;
+  cursor: pointer;
+}
+
+.menu div p:hover {
+  color: white;
 }
 
 .menu-all {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 .page,
 .preview {
   width: 45%;
+  overflow-y: auto;
 }
 
 .page .text,
@@ -126,6 +144,7 @@
 }
 
 .page {
+  height: 100vw;
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   border-right: 2px solid rgba(255, 255, 255, 0.2);
 }
@@ -153,6 +172,10 @@ h1 {
 .personal {
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
+}
+
+.menu-all:hover {
+  background: #363535;
+  transition: 0.1s;
 }
 </style>
