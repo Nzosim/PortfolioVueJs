@@ -221,8 +221,11 @@ h1 {
     padding-bottom: 10px;
   }
   .preview {
+    overflow-y: auto;
     width: 100%;
     border: none;
+    height: 100%;
+    padding-bottom: 40px;
   }
   .preview .text {
     padding: 20px;

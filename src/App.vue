@@ -39,4 +39,10 @@ a {
     border-radius: 10px 10px;
   }
 }
+
+@media screen and (max-width: 930px) {
+  #page {
+    overflow-y: auto;
+  }
+}
 </style>
