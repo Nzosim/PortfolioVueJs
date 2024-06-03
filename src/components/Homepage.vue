@@ -70,4 +70,11 @@ p {
     height: auto;
   }
 }
+
+@media screen and (max-height: 800px) {
+  .home_right {
+    height: 400px;
+    width: auto;
+  }
+}
 </style>
