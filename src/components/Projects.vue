@@ -1,5 +1,6 @@
 <template>
   <div>My Projects comming soon</div>
+  <div><a href="https://github.com/Nzosim">https://github.com/Nzosim</a></div>
 </template>
 
 <style scoped>
