@@ -43,7 +43,7 @@ a {
   background-color: #2c2c2c;
   position: fixed;
   bottom: 40px;
-  width: calc(100vw - 100px);
+  width: calc(100vw - 80px);
   border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
 

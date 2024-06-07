@@ -11,7 +11,12 @@
           <v-icon color="#e57373">mdi-folder-open-outline</v-icon>
           <p>bio</p>
         </div>
-        <div v-if="isBioOpen" class="d-flex text-white ml-6">
+        <div
+          v-if="isBioOpen"
+          class="d-flex ml-6"
+          :class="{ 'text-white': pageName === 'about' }"
+          @click="pageName = 'about'"
+        >
           <v-icon color="white">mdi-information</v-icon>
           <p>about-me.md</p>
         </div>
@@ -20,15 +25,30 @@
           <v-icon color="yellow">mdi-folder</v-icon>
           <p>experiences</p>
         </div>
-        <div v-if="isExperiencesOpen" class="d-flex ml-6">
+        <div
+          v-if="isExperiencesOpen"
+          class="d-flex ml-6"
+          :class="{ 'text-white': pageName === 'education' }"
+          @click="pageName = 'education'"
+        >
           <v-icon color="white">mdi-information</v-icon>
           <p>education.md</p>
         </div>
-        <div v-if="isExperiencesOpen" class="d-flex ml-6">
+        <div
+          v-if="isExperiencesOpen"
+          class="d-flex ml-6"
+          :class="{ 'text-white': pageName === 'internship' }"
+          @click="pageName = 'internship'"
+        >
           <v-icon color="white">mdi-information</v-icon>
           <p>internship.md</p>
         </div>
-        <div v-if="isExperiencesOpen" class="d-flex ml-6">
+        <div
+          v-if="isExperiencesOpen"
+          class="d-flex ml-6"
+          :class="{ 'text-white': pageName === 'apprentice' }"
+          @click="pageName = 'apprentice'"
+        >
           <v-icon color="white">mdi-information</v-icon>
           <p>apprentice.md</p>
         </div>
@@ -38,66 +58,36 @@
           <v-icon>{{ isContactOpen ? 'mdi-menu-down' : 'mdi-menu-right' }}</v-icon>
           <p>contact</p>
         </div>
-        <div v-if="isContactOpen" class="d-flex ml-6 mt-1">
+        <div v-if="isContactOpen" class="d-flex ml-6 mt-1" @click="pageName = 'contact'">
           <v-icon color="white">mdi-information</v-icon>
           <p>contact.md</p>
         </div>
       </div>
     </div>
-    <div class="page">
-      <div class="close">
-        <p>about-me.md</p>
-        <v-icon>mdi-close</v-icon>
-      </div>
-      <div class="text">
-        <p># SIMONIN Enzo</p>
-        <p>
-          Je suis `actuellement` en troisième année de **BUT Informatique** en `alternance` chez
-          **Dassault Systèmes**.
-        </p>
-        <p>
-          Futur étudiant de **Polytech Nancy** en cycle ingénieur Informatique Automatisme Robotique
-          et Réseaux `(IA2R)`, je suis à la recherche d'une alternance pour les `3` années à venir.
-        </p>
-        <p>Mon objectif est d'appronfindir mes connaissances grâce à la pratique en entreprise.</p>
-      </div>
-    </div>
-    <div class="preview">
-      <div class="close">
-        <div class="d-flex">
-          <v-icon class="mr-3">mdi-file-find</v-icon>
-          <p>preview</p>
-        </div>
-        <v-icon>mdi-close</v-icon>
-      </div>
-      <div class="text">
-        <h1>SIMONIN Enzo</h1>
-        <p>
-          Je suis <span class="text-yellow">actuellement</span> en troisième année de
-          <b>BUT Informatique</b> en <span class="text-yellow">alternance</span> chez
-          <b>Dassault Systèmes</b>.
-        </p>
-        <p>
-          Futur étudiant de <b>Polytech Nancy</b> en cycle ingénieur Informatique Automatisme
-          Robotique et Réseaux <span class="text-yellow">(IA2R)</span>, je suis à la recherche d'une
-          alternance pour les <span class="text-yellow">3</span> années à venir.
-        </p>
-        <p>Mon objectif est d'appronfindir mes connaissances grâce à la pratique en entreprise.</p>
-      </div>
-    </div>
+    <aboutMe v-if="pageName === 'about'" />
+    <education v-if="pageName === 'education'" />
+    <internship v-if="pageName === 'internship'" />
+    <apprentice v-if="pageName === 'apprentice'" />
+    <contact v-if="pageName === 'contact'" />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import aboutMe from '@/components/about-pages/about-me.vue'
+import education from '@/components/about-pages/education.vue'
+import internship from '@/components/about-pages/internship.vue'
+import apprentice from '@/components/about-pages/apprentice.vue'
+import contact from '@/components/about-pages/contact.vue'
 
 const isPersonalOpen = ref(true)
 const isBioOpen = ref(true)
 const isExperiencesOpen = ref(true)
 const isContactOpen = ref(true)
+const pageName = ref('about')
 </script>
 
-<style scoped>
+<style>
 .about {
   display: flex;
   color: rgba(255, 255, 255, 0.4);

@@ -29,12 +29,16 @@ a {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 @media screen and (min-width: 930px) {
   #page {
     position: absolute;
     left: 40px;
     top: 40px;
-    width: calc(100vw - 100px);
+    width: calc(100vw - 80px);
     height: calc(100vh - 80px);
     border-radius: 10px 10px;
   }
