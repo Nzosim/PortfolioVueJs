@@ -7,14 +7,14 @@
     <div class="text">
       <p># SIMONIN Enzo</p>
       <p>
-        Je suis `actuellement` en troisième année de **BUT Informatique** en `alternance` chez
-        **Dassault Systèmes**.
+        I am `currently` in my third year of **BUT Informatique** as an apprentice at **Dassault
+        Systèmes**.
       </p>
       <p>
-        Futur étudiant de **Polytech Nancy** en cycle ingénieur Informatique Automatisme Robotique
-        et Réseaux `(IA2R)`, je suis à la recherche d'une alternance pour les `3` années à venir.
+        Future student at **Polytech Nancy** in the Computer Science Automation Robotics and
+        Networks `(IA2R)`, I am looking for an apprenticeship for the next `3` years.
       </p>
-      <p>Mon objectif est d'appronfindir mes connaissances grâce à la pratique en entreprise.</p>
+      <p>My goal is to improve my knowledge through apprenticeship.</p>
     </div>
   </div>
   <div class="preview">
@@ -28,16 +28,16 @@
     <div class="text">
       <h1>SIMONIN Enzo</h1>
       <p>
-        Je suis <span class="text-yellow">actuellement</span> en troisième année de
-        <b>BUT Informatique</b> en <span class="text-yellow">alternance</span> chez
+        I am <span class="text-yellow">currently</span> in my third year of
+        <b>BUT Informatique</b> as an <span class="text-yellow">apprentice</span> at
         <b>Dassault Systèmes</b>.
       </p>
       <p>
-        Futur étudiant de <b>Polytech Nancy</b> en cycle ingénieur Informatique Automatisme
-        Robotique et Réseaux <span class="text-yellow">(IA2R)</span>, je suis à la recherche d'une
-        alternance pour les <span class="text-yellow">3</span> années à venir.
+        Future student at <b>Polytech Nancy</b> in the Computer Science Automation Robotics and
+        Networks <span class="text-yellow">(IA2R)</span>, I am looking for an apprenticeship for the
+        next <span class="text-yellow">3</span> years.
       </p>
-      <p>Mon objectif est d'appronfindir mes connaissances grâce à la pratique en entreprise.</p>
+      <p>My goal is to improve my knowledge through apprenticeship.</p>
     </div>
   </div>
 </template>
