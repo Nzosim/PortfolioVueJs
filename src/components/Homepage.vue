@@ -4,7 +4,7 @@
       <p class="name text-white text-h3">SIMONIN Enzo</p>
       <p class="job text-red-lighten-2 text-h5">> Apprentice Fullstack Developper</p>
     </div>
-    <img class="home_right" src="../assets/Homepage.png" />
+    <img class="home_right" src="../assets/mainpage.png" />
   </div>
 </template>
 
