@@ -67,20 +67,20 @@ a {
 
 .header_mid {
   display: flex;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .header_mid a {
   width: 140px;
   display: inline-block;
   text-align: center;
-  border-right: 2px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   padding: 10px 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .header_mid {
-  background: #232323;
+  background: #181818;
 }
 
 a.selected {
@@ -93,7 +93,7 @@ a.selected {
 }
 
 .mid_empty {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   width: calc(100% - (5 * 140px));
 }
 

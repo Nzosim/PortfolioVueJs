@@ -111,7 +111,7 @@ const pageName = ref('about')
 }
 
 .menu-all {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   color: white;
 }
 
@@ -124,20 +124,20 @@ const pageName = ref('about')
 
 .page .text,
 .preview .text {
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: 40px;
 }
 
 .close {
   justify-content: space-between;
   width: 30%;
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
   padding: 10px;
 }
 
 .page {
-  border-left: 2px solid rgba(255, 255, 255, 0.2);
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .page .text p {
@@ -197,7 +197,7 @@ h1 {
   }
   .preview {
     width: 70%;
-    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -207,7 +207,7 @@ h1 {
   }
   .menu {
     width: 100%;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding-bottom: 10px;
   }
   .preview {

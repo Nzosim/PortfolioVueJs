@@ -24,6 +24,12 @@ setInterval(() => {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: #1e1e1e;
+  position: fixed;
+  bottom: 40px;
+  width: calc(100vw - 81px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 a,
@@ -37,14 +43,6 @@ a {
 
 .time {
   padding: 2px;
-}
-
-.footer {
-  background-color: #2c2c2c;
-  position: fixed;
-  bottom: 40px;
-  width: calc(100vw - 80px);
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (min-width: 930px) {
