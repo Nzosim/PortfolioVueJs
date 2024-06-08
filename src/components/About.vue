@@ -58,7 +58,12 @@
           <v-icon>{{ isContactOpen ? 'mdi-menu-down' : 'mdi-menu-right' }}</v-icon>
           <p>contact</p>
         </div>
-        <div v-if="isContactOpen" class="d-flex ml-6 mt-1" @click="pageName = 'contact'">
+        <div
+          v-if="isContactOpen"
+          class="d-flex ml-6 mt-1"
+          :class="{ 'text-white': pageName === 'contact' }"
+          @click="pageName = 'contact'"
+        >
           <v-icon color="white">mdi-information</v-icon>
           <p>contact.md</p>
         </div>
@@ -84,7 +89,10 @@ const isPersonalOpen = ref(true)
 const isBioOpen = ref(true)
 const isExperiencesOpen = ref(true)
 const isContactOpen = ref(true)
-const pageName = ref('about')
+
+const url = window.location.href
+const page = url.split('/').pop()
+const pageName = ref(page === 'contact' ? 'contact' : 'about')
 </script>
 
 <style>

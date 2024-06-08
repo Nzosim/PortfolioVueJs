@@ -25,7 +25,7 @@ p {
 }
 
 .home_right {
-  height: 500px;
+  height: 60%;
   width: auto;
   position: absolute;
   top: 50%;
@@ -46,7 +46,7 @@ p {
     width: 40%;
   }
   .home_right {
-    height: 400px;
+    height: 40%;
   }
   .name {
     font-size: 2.5rem;
@@ -57,24 +57,24 @@ p {
 }
 
 @media screen and (max-width: 930px) {
-  .home_left {
-    top: 30%;
-    left: 20%;
-    width: 60%;
+  .home {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home_left,
+  .home_right {
+    position: static;
+    transform: none;
+    width: 80%;
+    margin: 10px 0;
   }
 
   .home_right {
-    top: 65%;
-    left: 20%;
-    width: 60%;
     height: auto;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .home_right {
-    height: 400px;
-    width: auto;
+    width: 80%;
   }
 }
 </style>
