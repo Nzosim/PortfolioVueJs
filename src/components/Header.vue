@@ -36,7 +36,15 @@ import { ref } from 'vue'
 
 const url = window.location.href
 const page = ref(url.split('/').pop())
-const isMenuOpen = ref(window.innerWidth > 930)
+const isMenuOpen = ref(window.innerWidth > 700)
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 700 && !isMenuOpen.value) {
+    isMenuOpen.value = true
+  } else if (window.innerWidth <= 700 && isMenuOpen.value) {
+    isMenuOpen.value = false
+  }
+})
 </script>
 
 <style scoped>
