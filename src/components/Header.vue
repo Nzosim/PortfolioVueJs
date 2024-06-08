@@ -13,16 +13,19 @@
   </div>
   <div class="header_mid" v-show="isMenuOpen">
     <a @click="page.length === 0" href="/" :class="{ selected: page.length === 0 }">Home</a>
-    <a @click="page = 'techstack'" href="techstack" :class="{ selected: page === 'techstack' }"
+    <a @click="page = 'techstack'" href="/techstack" :class="{ selected: page === 'techstack' }"
       >My TechStack</a
     >
-    <a @click="page = 'projects'" href="projects" :class="{ selected: page === 'projects' }"
+    <a @click="page = 'projects'" href="/projects" :class="{ selected: page === 'projects' }"
       >My Projects</a
     >
-    <a @click="page = 'about'" href="about" :class="{ selected: page === 'about' }">About Me</a>
-    <a @click="page = 'contact'" href="contact" :class="{ selected: page === 'contact' }"
-      >Contact Me</a
+    <a
+      @click="page = 'about'"
+      href="/about"
+      :class="{ selected: page === 'contact' || page === 'about' }"
+      >About Me</a
     >
+    <a @click="page = 'about'" href="/about/contact">Contact me</a>
     <div class="mid_empty"></div>
   </div>
   <hr class="header_bottom" />

@@ -10,11 +10,9 @@
       <div>Mail:</div>
       <div>> simonin.enzo.contact@gmail.com</div>
 
-      <div class="mt-5">Linkedin:</div>
-      <div>> https://github.com/Nzosim</div>
+      <p class="mt-5">[Link to my Github](https://github.com/Nzosim)</p>
 
-      <div class="mt-5">Github:</div>
-      <div>> https://www.linkedin.com/in/enzo-simonin-7b2241258/</div>
+      <p>[Link to my Linkedin](https://www.linkedin.com/in/enzo-simonin-7b2241258/)</p>
     </div>
   </div>
   <div class="preview">
@@ -31,19 +29,25 @@
       <div class="mt-5">Mail:</div>
       <div class="pl-3 bg-grey-darken-3 border-s-lg">simonin.enzo.contact@gmail.com</div>
 
-      <div class="mt-5">Linkedin:</div>
-      <a
-        href="https://github.com/Nzosim"
-        class="pl-3 bg-grey-darken-3 border-s-lg text-yellow d-block"
-        >https://github.com/Nzosim</a
-      >
-
-      <div class="mt-5">Github:</div>
-      <a
-        href="https://github.com/Nzosim"
-        class="pl-3 bg-grey-darken-3 border-s-lg text-yellow d-block"
-        >https://www.linkedin.com/in/enzo-simonin-7b2241258/</a
-      >
+      <div class="btn_link">
+        <v-btn class="mt-5" color="primary" target="_blank" href="https://github.com/Nzosim"
+          >Link to my Github</v-btn
+        >
+        <v-btn
+          class="mt-5"
+          color="primary"
+          target="_blank"
+          href="https://www.linkedin.com/in/enzo-simonin-7b2241258/"
+          >Link to my Linkedin</v-btn
+        >
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.btn_link {
+  display: flex;
+  flex-direction: column;
+}
+</style>
