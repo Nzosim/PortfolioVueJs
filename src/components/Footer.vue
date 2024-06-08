@@ -1,10 +1,12 @@
 <template>
   <div class="footer">
     <div class="footer_link">
-      <a href="https://github.com/Nzosim"><v-icon>mdi-github</v-icon></a>
-      <a href="https://www.linkedin.com/in/enzo-simonin-7b2241258/"
-        ><v-icon>mdi-linkedin</v-icon></a
-      >
+      <a href="https://github.com/Nzosim">
+        <img src="@/assets/github.png" alt="github" />
+      </a>
+      <a href="https://www.linkedin.com/in/enzo-simonin-7b2241258/">
+        <img src="@/assets/linkedin.png" alt="github" />
+      </a>
     </div>
     <div class="time">{{ time }}</div>
   </div>
@@ -23,7 +25,7 @@ setInterval(() => {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding-top: 6px;
   background-color: #1e1e1e;
   position: fixed;
   bottom: 40px;
@@ -32,17 +34,25 @@ setInterval(() => {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-a,
 .time {
   color: rgba(255, 255, 255, 0.4);
+  margin-right: 10px;
 }
 
 a {
-  padding: 8px;
+  padding-left: 15px;
 }
 
 .time {
   padding: 2px;
+}
+
+img {
+  width: 25px;
+}
+
+img:hover {
+  opacity: 0.7;
 }
 
 @media screen and (min-width: 930px) {
