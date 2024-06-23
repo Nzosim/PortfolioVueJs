@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="projects">
     <div class="menu">
@@ -37,8 +38,8 @@
             ></v-radio>
             <v-radio
               :class="{ 'text-white': selected === 'tcj' }"
-              label="HTML/CSS/JS"
-              value="tcj"
+              label="HTML/CSS"
+              value="hc"
             ></v-radio>
             <v-radio
               :class="{ 'text-white': selected === 'nuxt' }"
@@ -46,26 +47,16 @@
               value="nuxt"
             ></v-radio>
             <v-radio
-              :class="{ 'text-white': selected === 'java' }"
-              label="Java"
-              value="java"
-            ></v-radio>
-            <v-radio
               :class="{ 'text-white': selected === 'php' }"
               label="PHP"
               value="php"
-            ></v-radio>
-            <v-radio
-              :class="{ 'text-white': selected === 'flutter' }"
-              label="Flutter"
-              value="flutter"
             ></v-radio>
           </v-radio-group>
         </div>
       </div>
     </div>
     <div class="content">
-      <projectsList />
+      <projectsList :filter="selected" />
     </div>
   </div>
 </template>
@@ -76,7 +67,7 @@ import projectsList from '@/components/projects-pages/projects-list.vue'
 
 const isAllOpen = ref(true)
 const isFilterOpen = ref(true)
-const selected = ref('')
+const selected = ref(true)
 </script>
 
 <style scoped>
