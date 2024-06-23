@@ -1,15 +1,23 @@
 <template>
   <div v-for="item in projects" :key="item" class="all">
-    <p class="pb-3 text-red-lighten-2">
+    <!-- <p class="pb-3 text-red-lighten-2">
       {{ item.title }}
     </p>
     <div class="card">
       <img :src="item.image" alt="project1" width="100%" />
-      <div class="card_content">
-        <p>{{ item.description }}</p>
-        <v-btn class="btn" href="/">view details</v-btn>
-      </div>
-    </div>
+      
+    </div> -->
+
+    <p class="pb-3 text-red-lighten-2">
+      {{ item.title }}
+    </p>
+    <v-card class="mx-auto card">
+      <v-img height="300px" :aspect-ratio="1.67" :src="item.image" cover></v-img>
+
+      <v-card-text class="card_content text-grey mt-3">{{ item.description }}</v-card-text>
+
+      <v-card-actions> <v-btn class="btn ml-3" href="/">view details</v-btn></v-card-actions>
+    </v-card>
   </div>
 </template>
 
