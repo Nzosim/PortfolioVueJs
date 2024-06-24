@@ -4,7 +4,7 @@ import TechStack from '@/components/TechStack.vue'
 import Projects from '@/components/Projects.vue'
 import About from '@/components/About.vue'
 import NotFound from '@/components/NotFound.vue'
-
+import Soon from '@/components/soon.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -37,6 +37,11 @@ const router = createRouter({
       path: '/:pathMatch(.*)*', // Ceci correspond à toutes les routes non définies
       name: 'NotFound',
       component: NotFound
+    },
+    {
+      path: '/soon',
+      name: 'soon',
+      component: Soon
     }
   ]
 })

@@ -8,7 +8,7 @@
 
         <v-card-text class="card_content text-grey mt-3">{{ item.description }}</v-card-text>
 
-        <v-card-actions> <v-btn class="btn ml-3" href="/">view details</v-btn></v-card-actions>
+        <v-card-actions> <v-btn class="btn ml-3" href="/soon">view details</v-btn></v-card-actions>
       </v-card>
   </div>
 </template>
@@ -47,42 +47,42 @@ let projects = [
   {
     title: 'Music Brainz',
     description:
-      'Description of this aaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaa  aaaaaaaaaaaaa',
+      'Website which allows you to search for music or authors using an API, it is developed with Vue.js',
     image: musicBrainzImage,
     type: ['js', 'vue', 'hc']
   },
   {
     title: 'PizzaShop',
     description:
-      'Description of this sssssssssssssssssssss projecssssssss ssss ss ssssssssssssss sssssssssssssss ssssssss ssssssssssss',
+      'Complete API developed in PHP for a pizzeria, it allows you to place an order, check stock or even be notified when the status of your order changes',
     image: pizzaShop,
     type: ['php']
   },
   {
     title: 'Photo Website',
     description:
-      'Description of this sssssssssssssssssssss projecssssssss ssss ss ssssssssssssss sssssssssssssss ssssssss ssssssssssss',
+      'Website for my father who does photography, to show him an example of projects that can be done with only HTML/CSS/JS',
     image: photo,
     type: ['js', 'hc']
   },
   {
     title: 'My Portfolio',
     description:
-      'Description of this sssssssssssssssssssss projecssssssss ssss ss ssssssssssssss sssssssssssssss ssssssss ssssssssssss',
+      'Creation of my portfolio in progress in order to present to you my projects of which I am most proud, it is still evolving ath the moment',
     image: thisImage,
     type: ['hc', 'vue', 'js']
   },
   {
     title: 'NetVod',
     description:
-      'Description of this sssssssssssssssssssss projecssssssss ssss ss ssssssssssssss sssssssssssssss ssssssss ssssssssssss',
+      'School project developed in PHP for a small streaming application, I don\'t know where the inspiration for the style comes from, TOODOOM',
     image: netvod,
     type: ['js', 'hc', 'php']
   },
   {
     title: 'Discord bot',
     description:
-      'Description of this sssssssssssssssssssss projecssssssss ssss ss ssssssssssssss sssssssssssssss ssssssss ssssssssssss',
+      'I started IT with discord bot development, I developed around fifty of them, each one as different as the last',
     image: discord,
     type: ['js']
   }
