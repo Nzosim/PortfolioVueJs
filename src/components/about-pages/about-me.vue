@@ -7,7 +7,7 @@
     <div class="text">
       <p># SIMONIN Enzo</p>
       <p>
-        I am `currently` in my third year of **BUT Informatique** as an apprentice at **Dassault
+        I am `currently` in my third year of **University Bachelor of Technology in Computer Science** as an apprentice at **Dassault
         Systèmes**.
       </p>
       <p>
@@ -29,7 +29,7 @@
       <h1>SIMONIN Enzo</h1>
       <p>
         I am <span class="text-yellow">currently</span> in my third year of
-        <b>BUT Informatique</b> as an <span class="text-yellow">apprentice</span> at
+        <b>University Bachelor of Technology in Computer Science</b> as an <span class="text-yellow">apprentice</span> at
         <b>Dassault Systèmes</b>.
       </p>
       <p>

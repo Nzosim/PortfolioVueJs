@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="contact">
-        <div class="d-flex menu-all pt-3 pb-2 pl-2" @click="isContactOpen = !isContactOpen">
+        <div class="d-flex menu-all pt-3 pb-2 pl-1" @click="isContactOpen = !isContactOpen">
           <v-icon>{{ isContactOpen ? 'mdi-menu-down' : 'mdi-menu-right' }}</v-icon>
           <p>contact</p>
         </div>
