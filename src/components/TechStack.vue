@@ -35,7 +35,7 @@ const images = [
     alt: 'Image 1',
     link: 'https://developer.mozilla.org/fr/docs/Web/JavaScript'
   },
-  { src: typescriptImage, alt: 'JavaScript', link: 'https://documentation2.com' },
+  { src: typescriptImage, alt: 'JavaScript', link: 'https://typescriptlang.org/' },
   { src: cImage, alt: 'TypeScript', link: 'https://www.typescriptlang.org' },
   { src: golangImage, alt: 'Golang', link: 'https://go.dev' },
   { src: vuejsImage, alt: 'Vue.js', link: 'https://vuejs.org' },
